@@ -1,9 +1,3 @@
-"""
-This is a program written as a single function. The function should accept the netlist
-as an input (a path to a text file). The function should return the symbolic and
-numerical results
-"""
-
 import re
 from sympy import symbols, sympify, Matrix
 import numpy as np
@@ -135,3 +129,4 @@ numeric_ans = [ans.evalf(subs=locals_dict) for ans in symbolic_ans]
 #-------------------------------------------------------------
 for var, val in zip(x, numeric_ans):
     print(f"{var} = {float(val):.6f}")
+
